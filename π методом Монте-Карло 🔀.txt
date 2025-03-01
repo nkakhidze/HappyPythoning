@@ -1,3 +1,4 @@
+https://stepik.org/lesson/499669/step/8?unit=491205
 Вычисление приближённого значения числа π методом Монте-Карло.
 
 import random
