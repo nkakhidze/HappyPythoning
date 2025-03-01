@@ -1,0 +1,30 @@
+На шахматной доске 8×8 стоит конь. Напишите программу, которая отмечает положение коня на доске и все клетки, которые бьет конь. Клетку, где стоит конь, отметьте английской буквой N, а клетки, которые бьет конь, отметьте символами *, остальные клетки заполните точками.
+
+x = input()
+elmnt = '*'
+xFrst = abs(8 - int(x[1]))
+x2 = ord(x[0])-97
+
+##  вывели матрицу
+# for i in range(8):
+#     for j in range(8):
+#         print(i,j, end = '   ')
+#     print()
+#     print()
+
+
+
+
+pole = [['.']*8 for _ in range(8)]
+
+for i in range(8):
+    for j in range(8):
+        if (i == (xFrst + 2) or i == (xFrst - 2)) and (j == (x2 + 1) or j == (x2 - 1)):
+            pole[i][j] = elmnt
+        if (i == (xFrst + 1) or i == (xFrst - 1)) and (j == (x2 + 2) or j == (x2 - 2)):
+            pole[i][j] = elmnt
+
+pole[xFrst][x2] = 'N'
+#
+for i in range (8):
+    print(*pole[i])
